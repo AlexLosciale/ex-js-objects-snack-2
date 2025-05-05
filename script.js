@@ -9,7 +9,12 @@ console.log(hamburger.name); // ?
 console.log(secondBurger.name ); // ?
 
 //Senza lanciare il codice, riesci a prevedere cosa viene stampato in console?
+
+//vengono stampati "Double Cheese Burger" e "Double Cheese Burger"
+//Perché gli oggetti sono passati per riferimento, quindi quando modifichiamo secondBurger, stiamo modificando anche hamburger.
+
 //Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice?
+//Solo uno, l'oggetto hamburger. secondBurger è solo un riferimento a quell'oggetto.
 
 //Code Question 2
 
@@ -26,7 +31,9 @@ console.log(hamburger.ingredients[0]); // ?
 console.log(secondBurger.ingredients[0]); // ?
 
 //Senza lanciare il codice, riesci a prevedere cosa viene stampato in console?
+//vengono stampati "Cheese" e "Salad"
 //Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice?
+//Sono stati creati due oggetti: hamburger e secondBurger.
 
 //Code Question 3
 
@@ -44,10 +51,11 @@ const hamburger = {
 	}
 };
 
-//Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice?
-
 const secondBurger = structuredClone(hamburger);
-const thirdBurger = structuredClone(hamburger); 
+const thirdBurger = structuredClone(hamburger);
+
+//Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice?
+//Sono stati creati tre oggetti: hamburger, secondBurger e thirdBurger.
 
 //Code Question 4
 
@@ -70,4 +78,6 @@ const restaurant = {
 };
 
 //Qual è il metodo migliore per clonare l’oggetto chef, e perché?
+//Il metodo migliore per clonare l'oggetto chef è utilizzare la sintassi {...chef}
 //Qual è il metodo migliore per clonare l’oggetto restaurant, e perché?
+//Il metodo migliore per clonare l'oggetto restaurant è structuredClone(restaurant)
